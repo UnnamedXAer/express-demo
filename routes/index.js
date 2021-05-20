@@ -4,7 +4,7 @@ var router = express.Router();
 const startDate = new Date();
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
+router.get('*', function (req, res, next) {
 	res.render('index', {
 		serverStartAt: startDate.toUTCString(),
 		loadedAt: new Date().toUTCString()
